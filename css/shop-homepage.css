@@ -1,0 +1,18 @@
+/*!
+ * Start Bootstrap - Shop Homepage (https://startbootstrap.com/templates/shop-homepage)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-shop-homepage/blob/master/LICENSE)
+ */
+body {
+  padding-top: 56px;
+  background: rgb(188,191,191);
+  background: linear-gradient(169deg, rgba(188,191,191,1) 0%, rgba(218,192,144,1) 23%, rgba(0,0,0,1) 100%);
+}
+
+.hidden {
+	display:none;
+}
+
+.col-lg-9{
+	margin-top:4px;
+}

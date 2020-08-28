@@ -1,0 +1,10 @@
+body {
+	height:100vh;
+  padding-top: 56px;
+  background: rgb(188,191,191);
+  background: linear-gradient(169deg, rgba(188,191,191,1) 0%, rgba(218,192,144,1) 23%, rgba(0,0,0,1) 100%);
+}
+
+.card {
+	width:50vw;
+}
