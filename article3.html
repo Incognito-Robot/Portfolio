@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Article IA</title>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/blog-post.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Accueil
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Title -->
+        <h1 class="mt-4">Du Machine Laerning au Deep Q Learning</h1>
+
+
+
+        <!-- Date/Time -->
+
+        <hr>
+
+        <!-- Preview Image -->
+        <img class="img-fluid rounded" src="img/a1.jpg" alt="">
+
+        <hr>
+
+        <!-- Post Content -->
+        <a class="lead">Du Machine Learning au Q Learning
+
+I – Le Machine Learning, qu’est-ce que c’est ?</br></br>
+
+C’est une étude scientifique d’algorithmes et de modèles statistiques. Elle est utilisée dans les systèmes informatiques pour effectuer une tâche spécifique, basée sur des échantillons de données « d’entrainement ». Elle effectue donc des suppositions ou décisions, sans être explicitement programmée pour effectuer la dite tâche. Ces algorithmes sont utilisés dans une large variété de domaines, tels que le filtrage d’email, ou la « Vision informatique », permettant à la machine d’avoir une haute capacité de compréhension des images ou vidéos. Cela permet d’automatiser des tâches nécessitant le système visuel humain.</br>
+L’ordinateur apprend donc à agir comme un humain, améliorer leur apprentissage à travers le temps, de façon autonome, en leur fournissant des données et informations dans la forme d’observations et d’interactions avec le monde réel.</br>
+On peut percevoir le « Machine Learning » comme une machine qui apprend de ses erreurs, tout en exécutant une instruction qui lui est demandée, de façon plus ou moins directe.</br>
+A l’heure actuelle, il y’a de nombreux algorithmes de Machine Learning différents, qui sont tous groupés par style d’apprentissage, ou similarité par forme ou fonction. Peu importe leur style ou fonction, tous les algorithmes de Machine Learning sont constitués d’une représentation (Dans le langage que l’ordinateur comprend), une évaluation (Soit l’objectif), et l’optimisation (Qui revient à essayer d’obtenir le « score » le plus haut.)
+Le but de l’algorithme, lors du Machine Learning est de généraliser à travers les échantillons d’entrainement, et donc interpréter avec succès les données qu’il n’a jamais « vu » auparavant.</br></br>
+
+On peut donc y retrouver plusieurs types d’algorithmes d’apprentissage, tels que : </br>
+Le « Supervised Learning », apprentissage supervisé</br>
+« Unsupervised Learning », un apprentissage non supervisé</br>
+« Reinforcement learning », un apprentissage par « renforcement »</br>
+Etc.</br></br>
+
+2 - Reinforcement Learning</br></br>
+
+Le Reinforcement Learning, soit apprentissage par renforcement est une partie du Machine Learning, désignant la façon dont les logiciels doivent se comporter dans un environnement, pour maximiser leur « récompense ». C’est l’un des trois modèles typiques de Machine Learning, avec le Supervised Learning et Unsupervised Learning.</br>
+Il est différent du Supervised learning car ces paires d’entrées et sorties ne doivent pas être présentées, et les actions sous-optimales ne doivent pas être explicitement corrigées. A la place, on se concentre sur un équiliibre entre l’exploration de l’inconnu et l’exploitation du savoir de la machine.</br></br>
+
+On peut imager le compromis entre exploration et exploitation de la façon suivante : Si la machine obtient une récompense en début de « partie », elle cherchera à récupérer cette récompense le plus possible. Le problème est que si c’est une petite récompense, en début de cette partie, la machine n’explorera pas vraiment, et cherchera à récupérer ce qu’elle à déjà trouvée au début, ce qui peut lui faire rater d’autres récompenses, différentes. En revanche, si la machine explore trop, elle arrivera peut-être à la meilleure récompense, un objectif final, mais ne récoltera pas toutes les récompenses possibles. Pire encore, elle peut tomber sur un « malus ». C’est pour cela qu’il faut trouver un compromis entre exploration et exploitation, afin de maximiser l’efficacité de la machine dans sa tâche.
+A ce sujet, une stratégie existe : Il faudrait que la machine choisisse la meilleure action qu’elle connaît la plupart du temps (Par exemple 75% du temps.), mais, occasionnellement, explore une nouvelle approche ou direction aléatoire. Cette stratégie se nomme « epsilon-greedy », ou epsilon est le pourcentage du temps ou la machine sort de sa « zone de confort », dans le but de maximiser la récompense gagnée qu’elle connaît jusque-là. On démarre souvent avec beaucoup d’exploration, et, au fil du gain de savoir par la machine, on baisse le taux d’exploration, afin d’obtenir les meilleures récompenses au long terme. Elle explore donc beaucoup en premier lieu, afin d’obtenir des connaissances sur l’environnement dans lequel elle se trouve, avant d’explorer de moins en moins et d’exploiter le savoir qu’elle a pu obtenir. Cependant, la récompense n’est pas toujours immédiate, donc l’apprentissage peut être plus ou moins long. </br>
+3 - Q Learning</br></br>
+
+Le Q-Learning est une forme de reinforcement learning ne nécessitant pas d’exemple. Son but est d’apprendre une politique disant à la machine quelle action prendre sous quelles circonstances. Il ne nécessite pas de modèle de l’environnement, car sa résolution de problèmes se fait par des transitions stochastiques (Traitement des données par la probabilité) et récompenses, sans besoin d’adaptations.</br>
+Il maximise donc la valeur prévue de la récompense totale à travers chaque (et toutes) les étapes réussies, en démarrant du statut actuel. Il peut donc identifier une politique de sélection d’action optimale, avec une exploration infinie, sa politique étant en partie aléatoire. « Q » désigne la fonction qui retourne la récompense, afin de donner ce « renforcement ». Certains disent que le « Q » signifierait la qualité d’une action choisie dans un certain état.</br></br>
+
+Nous avons donc besoin d’un algorithme qui apprend une politique définissant l’interaction avec un environnement, sous différentes circonstances, afin de maximiser les récompenses.</br>
+On peut donc en définir les termes : </br></br>
+
+1. Apprentissage : L’algorithme doit apprendre la stratégie par lui-même.</br>
+2. Politique : C’est le résultat de l’apprentissage. En fonction de l’état de l’environnement, elle renverra la meilleure interaction avec lui pour maximiser la récompense.</br>
+3. Interaction : Ce sont les actions que l’algorithme devrait prendre en fonction des circonstances</br>
+4. Environnement : C’est ce avec quoi l’algorithme interagit, et tout ce qui peut influencer cet environnement, ainsi que sa réaction à l’interaction choisie.</br>
+5. Circonstance : Ce sont les différents « états » dans lequel l’environnement peut se trouver.</br>
+6. Récompense : C’est le but, la raison d’interagir avec l’environnement.</br></br>
+
+Lorsqu’on commence à faire du Q learning, on crée ce qui est appelé une Q-table, ou une matrix. Elle suit le modèle [état, action], ayant pour valeurs initiales 0. On la met ensuite à jour en stockant nos q-values (valeur permettant d’éviter les faux positifs). Elle devient ensuite une table de référence permettant à la machine de sélectionner les meilleures actions basées sur cette valeur.</br>
+La machine agit donc d’une des deux façons : Elle exploite ses données, en utilisant la q-table, ou alors elle procède de l’autre façon, en agissant aléatoirement, explorant donc.</br>
+On utilise donc de nouveau la méthode epsilon-greedy vue précédemment.</br>
+La particularité, ici, est qu’après chaque étape ou action effectuée par la machine, la q-table se met à jour. Cette mise à jour se termine lorsque la session s’arrête. Terminé, ici, veut dire que la machine à atteint un point terminal – Par exemple, atteindre la fin du jeu, ou compléter un objectif désiré. Elle n’apprend pas beaucoup après une seule session, mais avec assez d’exploration, elle apprendra les q-values optimales.</br>
+On peut distinguer trois étapes « basiques » :  </br>
+1. La machine démarre dans un statut « S1 » et obtient une récomepnse « R1 »</br>
+2. Elle sélectionne une action en fonction de la Q-table, avec la plus grande valeur, ou effectue un choix aléatoire.</br>
+3. Elle met à jour les Q-values.</br></br>
+
+4 - Neural Networks</br></br>
+
+Les « Neural networks », ou réseaux de neurones sont des systèmes informatiques qui sont inspirés par les réseaux de neurones biologiques constituant les cerveaux animaux. Ils ne sont pas identiques pour autant. Ces systèmes apprennent à effectuer des tâches en considérant des exemples, généralement sans avoir été programmés pour effectuer des tâches spécifiques. Par exemple, lors d’une reconnaissance d’images, ils apprennent à identifier certaines images en analysant des images « marquées ». Par marquées, on parle d’images qui sont ou ne sont pas ce qu’il doit vérifier. (Exemple : Image 1 est une image de chien, Image 2 n’est pas une image de chien.)</br>
+Le but de lui montrer ces images marquées est qu’il puisse identifier le contenu de l’image dans une autre image. (Donc reconnaître un chien à partir des deux images qui lui ont été montrées.) Au début, ils le font sans aucun savoir sur le contenu. Par conséquent, ils génèrent automatiquement des caractéristiques à partir des exemples qu’ils traitent (Par exemple, pour un chien, on pourrait noter la queue, la truffe, ainsi de suite.)
+Un réseau de neurones artificiels est basé sur une connexion d’unités ou nœuds nommés « neurones artificiels ». Chaque connexion peut envoyer un signal à une autre neurone. La neurone recevant le signal peut la traiter, et l’envoyer aux autres neurones connectées.</br>
+Lors d’implémentations, le signal lors d’une connexion est un vrai nombre, et la sortie de chaque neurone est traité par une fonction non linéaire de la somme de ses entrées. Chaque connexion est nommée « Bord ». Chaque neurone et bord détient un « poids » qui s’ajuste au fil de l’apprentissage. Ce poids permet d’augmenter ou affaiblir la puissance du signal à la connexion. Normalement, les neurones sont organisés sous forme de couches, et chaque couche effectue des transformations différentes à leurs entrées. Les signaux traversent donc de la première couche à la dernière couche, et peuvent parfois traverser ces couches plusieurs fois. Par ailleurs, un neurone peut recevoir plusieurs entrées, et deux neurones différents peuvent recevoir la même entrée.</br>
+Dans un réseau neuronal, changer le poids de n’importe quelle connexion a un effet réverbatif sur tous les autres neurones et leurs activations dans les couches conséquentes. En effet, chaque neurone dans un réseau de neurones est comme son propre petit modèle.
+Pour entrainer le réseau de neurones, on utilise un MSE (Mean Squared Error, c’est-à-dire Erreur quadratique moyenne) comme coût de fonction. Le MSE d’un modèle nous indique à quel point la valeur est erronnée en moyenne. En quadrillant les erreurs des prédictions avant d’en faire la moyenne, on peut punir les prédictions qui sont trop éloignées des autres qui sont légèrement erronées. Les fonctions de régression linéaire et logique opèrent d’une façon très similaire.</br>
+Le but initial était de résoudre des problèmes de la même façon que le cerveau humain, mais avec le temps, le but s’est dirigé vers des tâches spécifiques, déviant donc de la biologie.</br>
+5 - Deep Q-Learning</br></br>
+
+Le Q Learning est un algorithme simple, mais puissant, donnant les indications à la machine. Mais s’il est trop long, si l’environnement est doté de 1000 statuts différents, et 1000 actions différentes par statut ? Cela ferait une table bien trop grande.</br>
+Le problème serait la mémoire demandée pour sauvegarder les mises à jour de la table, et cette table augmenterait au fil des statuts différents
+De plus, le temps demandé pour créer la table serait beaucoup trop grand, voire irréaliste.</br>
+C’est là que le Deep Q Learning intervient ; On utilise un réseau de neurones pour donner une valeur approximative de la fonction Q-value. Le statut est donné à l’entrée, et la Q-value de chaque action est générée à la sortie. </br>
+On peut donc voir une illustration de la différence entre Q-learning et Deep Q-learning sur l’image ci-dessous.</br></br>
+
+On procède par les étapes suivantes : </br>
+A. Les expériences passées sont sauvegardées par l’utilisateur sur la mémoire</br>
+B. La prochaine action est déterminée par la sortie maximale du réseau</br>
+C. Pour palier à la marge d’erreur précédente, le réseau va mettre à jour son gradient en utilisant une « Backpropagation », afin de converger avec la valeur idéale. (La backpropagation consiste en la modification du poids des neurones du réseau, afin de limiter les pertes et erreurs.) </br>
+</br>
+Dans des cas plus grands, le Deep Q Learning marche de cette façon : </br>
+1. On trouve et stocke des échantillons, avant de les répéter avec la politique actuelle.</br>
+2. On obtient des échantillons aléatoires grâce aux replays faits (Experience Replay)</br>
+3. On utilise les expériences échantillonnées pour mettre à jour le Q Network</br>
+4. On répète ce processus.</br>
+
+Pourquoi utiliser des échantillons aléatoires, au lieu d’échantillons séquentiels ? Les échantillons séquentiels sont corrélés temporellement, les uns entre les autres. Dans un apprentissage statistique, et dans une optique d’optimisation, on veut que notre donnée soit distribuée indépendamment. On ne veut donc aucune corellation. Les échantillons aléatoires brisent donc cette corrélation, ce qui évite des oscillations ou divergences de l’exemple, ce qui peut arriver lorsque les données sont correllées.</br>
+On met à jour le réseau afin de baisser le taux d’erreur. Cela veut dire que la politique de la machine devient de plus en plus similaire à la vraie Q value. </br>
+</br>
+6 - Swarm Intelligence</br>
+</br>
+La « Swarm Intelligence », ou intelligence distribuée est un comportement collectif, décentralisé et auto-organisé. Il consiste en une population simple, qui interagit localement l’un avec l’autre, ainsi que son environnement. Son inspiration vient souvent de la nature – Comme par exemple l’esprit de ruche, l’un des exemples le plus parlant lorsqu’on parle de l’intelligence distribuée. Les sujets suivent des règles simples, amenant à l’émergence d’un comportement global intelligent.</br>
+On peut prendre l’exemple de Boids, un programme de vie artificiel développé par Craig Reynolds en 1986, simulant l’agrégation des oiseaux. Ils respectaient trois règles : </br>
+La séparation, qui visait à ne pas surpeupler une zone</br>
+L’alignement, afin d’être dans la même direction que le reste des oiseaux</br>
+La cohésion, afin de rester proche du centre du groupe.</br>
+Comparé à un algorithme normal, un algorithme d’IA ayant un comportement d’intelligence distribuée ouvre un autre champ d’actions ; Des machines, ou sujets pouvant interagir entre eux, les rendant donc plus efficace, et pouvant permettre la découverte de nouvelles stratégies de groupe. Cela permet donc de simuler certaines organisations existantes, ou encore de guider l’humain vers un esprit de ruche similaire, on peut par exemple prendre l’exemple d’Unanimous AI, ayant développé « Swarm », qui est utile dans les votes. En effet, cela permet à différents sujets de se mettre d’accord lors d’un vote, offrant une certaine flexibilité. L’IA peut donc scanner la conviction du choix des utilisateurs à travers le temps de vote, en ressortir des graphiques, etc. – Ses utilisations sont multiples.</br>
+</br>
+7 – Un exemple d’IA parlant</br>
+</br>
+On peut donc appliquer la plupart des termes vus précédemment dans un exemple relativement parlant, se déroulant dans le jeu « Minecraft ». Ici, nous allons parler de deux bots différents : Le projet « Baritone », ainsi que des bots créés par « Conn3r ». </br>
+</br>
+Nous parlerons en premier du projet « Baritone », et de son évolution.</br>
+Baritone est un bot créé par des joueurs importants d’un serveur nommé « 2b2t », un serveur anarchie sur Minecraft. Le principe de ces serveurs est simple ; Il n’y a aucune règle. De nombreuses personnes ont donc contribué au projet. Le but était de créer un bot automatique pouvant s’échapper du spawn du jeu. Ce qui le différencie des autres bots, c’est qu’il effectue ses choix pendant son trajet, et s’adapte à ce qu’il se passe autour de lui. Il est donc capable de calculer la route la plus optimale, de rajouter (ou retirer) des blocs afin de modifier sa route, tout en automatisant les tâches du joueur – Minage, manger, etc.</br>
+C’est un bot assez puissant pour s’échapper du spawn de 2b2t, avec une chance de succès de 32%, ce qui est un exploit, ces serveurs étant réputés pour être très difficiles. Ce bot a donc eu plusieurs versions, et plusieurs branches de développement. Initialement, la branche publique principale ne suivait qu’un algorithme de Q Learning, mais une branche privée, elle, a reçue de nombreuses modifications, l’algorithme se reposant beaucoup plus sur du Reinforcement Learning pur, ainsi qu’un apprentissage par elle-même, à tel point que plusieurs parties du bot ont été remplacés par des réseaux de neurones, ce qui a amené à de grandes améliorations sur son efficacité.</br>
+</br>
+Peu après, vers août 2019, des rumeurs ont commencées à circuler au sujet d’un joueur s’étant fait attaquer par des bots, ce que Baritone ne peut pas faire. Lorsque la vidéo est arrivée sur Reddit, les joueurs ont crus qu’une nouvelle version de Baritone était sortie, permettant aux bots de combattre des joueurs, mais c’était en réalité l’œuvre d’un joueur nommé « Conn3r », ayant créé des bots totalement différents. </br>
+Avant de parler de l’apprentissage de ces bots, et de leur fonctionnement, parlons d’abord de ce qu’il s’est passé.</br>
+Un joueur se baladait sur un serveur du nom de « Constantium », similaire à 2b2t, jusqu’à ce qu’il croise un joueur. Ce joueur s’arrête simplement devant lui, et, lorsqu’il tente de s’en approcher, il recule. Ses mouvements sont parfaits, il est impossible de le rattraper. Ce petit jeu dure quelques minutes, ce joueur étant en réalité un bot, servant d’éclaireur, alors qu’une dizaine d’autres sont en chemin pour le rejoindre. Le bot ira même jusqu’à poser plusieurs blocs pour passer au dessus de la lave afin de rester écarté du joueur. Lorsque le joueur réalise que les bots sont là, il est déjà trop tard, le bot qui fuyait depuis le début s’approchant déjà du joueur. Leur trajet étant optimal, tout comme leurs mouvements, ils sont bien trop rapides pour lui, il n’a simplement aucune chance de leur échapper.</br>
+</br>
+L’apprentissage de ces bots s’est déroulé en trois étapes, chacune plus technique que la précédente, demandant des réseaux de neurones plus imposants que les précédents, tout comme le temps d’entrainement.</br>
+La première phase consiste en l’entrainement des bots pour effectuer les actions de base de Minecraft, grâce à un dataset constitué de 60 millions d’exemples humains, ainsi qu’une grande quantité de la part de Baritone.</br>
+La seconde phase, elle, est une spécialisation pour les serveurs d’anarchie. Conn3r a donc récupéré du contenu a partir de vidéos sur 2b2t, de lives, et d’autres sources de média, ce qui leur permettrait d’apprendre la façon dont ils doivent se comporter sur un serveur anarchie.
+Dans leur troisième phase, ils prennent le contrôle d’un joueur en jeu, vu qu’ils savent quoi faire. Cette étape est nommée « Raffinage » : Le bot joue au jeu en boucle, et, au lieu de faire les décisions du joueur, il cherche à faire les décisions nécessaires à remplir son objectif. L’objectif, dans un serveur anarchie, est de survivre, par conséquent, le bot considère la mort comme punition. Une fois qu’il l’aura assez expérimenté, il essaiera de l’éviter autant qu’il peut.</br>
+Par exemple, au début, le bot ignorait ses barres de vie et de nourriture – Mais au fil du temps, il a compris qu’ils étaient liés à sa survivabilité.  Une autre modification était que le bot ne pouvait plus recevoir de récompense s’il s’écartait de plus de quelques milliers de blocs du spawn, afin qu’il puisse continuer de s’entrainer plus longtemps. Il fut surpris du résultat ; Initialement, le bot tuait les animaux, pour chercher de la nourriture, ainsi de suite. C’est ici qu’un algorithme de renforcement learning classique ce serait arrêté, mais les bots de Conn3r ont été plus loin, commençant à tuer les monstres hostiles, et différencier les monstres hostiles des neutres ou passifs. Il a donc laissé le programme tourner quelques jours, et le programme avait appris encore une chose ; Il avait appris à aller dans le Nether pour se déplacer plus vite, sortir du spawn, et ensuite en ressortir, ce qui est bien plus rapide. (Marcher dans le nether divise la distance parcourue par 8, par conséquent, le bot reçoit sa récompense 8 fois plus vite.)</br>
+
+Maintenant, parlons de la « quatrième » étape, qui n’en est pas vraiment une. Sur les serveurs anarchie, la forme de combat contre les joueurs la plus développée est le « Crystal PvP ». Elle vise à utiliser un Endercrystal. Un cristal qui, lorsque posé, peut être attaqué pour exploser et causer de lourds dommages à l’adversaire. Conn3r a donc eu plusieurs problèmes pour leur permettre l’apprentissage. Il devait obtenir des cristaux, ce qui est dur à avoir dans le jeu. Le problème fut résolu en leur fournissant un kit standard. Le deuxième, lui, était la caméra. Jusque là, les bots n’avaient qu’à regarder leur ennemi, la caméra étant verrouillée sur lui. Pour le crystal pvp, la caméra doit être déverrouillée, car le bot ne regardera pas toujours son adversaire, il doit parfois regarder le cristal. Cela a causé un comportement étrange de la part des bots qui n’étaient pas habitués, car ils devaient choisir la direction – Ils n’avaient pas eu à la choisir jusque là. Le troisième était les conditions du cristal : Il ne peut être posé que sur de l’obsidienne ou de la bedrock, sans aucune entité s’y trouvant, ainsi qu’un espace disponible au dessus de lui. Le dernier problème, lui, est le plus important ; Le dommage collatéral. Le réseau est unique, par conséquent, la mort d’un seul membre transmet la punition à tout le groupe. Par conséquent, si on leur donnait le cristal (qui effectue des dégâts de zone) ou une épée, ils opteraient trop souvent pour l’épée. Par conséquent, il s’occupe de les entrainer seul. Il réfléchit donc à les rétablir en Swarm, tout en réduisant progressivement les punitions pour les dégâts collatéraux, pour qu’ils s’améliorent d’eux même. Il exprime même le fait qu’il devra peut-être modifier les poids des neurones manuellement afin de retirer cette peur d’accidentellement tuer un membre du réseau. </br>
+</br>
+</br>
+Dans cet article, nous avons pu parler de l’IA en rapport avec les jeux vidéos, tout en expliquant le nécéssaire du Machine Learning jusqu’au Deep Q Learning, en exprimant les problèmes qui peuvent être rencontrés, ainsi que les solutions, grâce à l’exemple de Baritone ainsi que les bots de Conn3r.
+</a>
+
+      
+
+        
+        <hr>
+
+            </div>
+
+          </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <!-- /.container -->
+  </footer>
+
+</body>
+
+</html>
